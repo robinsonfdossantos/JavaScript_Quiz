@@ -36,41 +36,24 @@ To access the scores, open the DevTools on your browser and navigate to the tab 
 When the button 'Save' is actioned a confirm box is displayed to ensure the data was storaged and asking if you want to play again.
 
 If you choose to play again the page will reloaded and a new quiz starts, otherwise, a new message will be displayed asking if you really want to leave the quiz. If you confirm that you do not want to play anymore, the page will be closed.
-<img src="./Assets/images/play-again.png" alt="confirm saving and play again" width="40%" height="40%" />
-<img src="./Assets/images/quit.png" alt="quit the game or play again" width="40%" height="40%" />
-
-<img src="./Assets/images/numbers-confirm.png" alt="confirm if want to have numbers" width="40%" height="40%" />
-<img src="./Assets/images/special-confirm.png" alt="confirm if want to have special characteres" width="40%" height="40%" />
-
-As soon as the end-user finishes confirming what he wants or not in his password, the function will be displayed to the screen with a random password that contains everything as required.
-
-<img src="./Assets/images/password-displayed.png" alt="example of a password with 8 characteres" width="60%" height="60%" />
-
+<img src="./Assets/images/play-again.png" alt="confirm saving and play again" width="30%" height="30%" />
+<img src="./Assets/images/quit.png" alt="quit the game or play again" width="30%" height="30%" />
 
 ## Development & Deployment
 
 The code to create the website was developed using Javascript, where it was possible create interaction by using events as "click" on the buttom and a group of comparisons of the data inserted to attend the acceptance criteria. 
 
-The screenshot below shows part of the code where a function is created and a group comparisons happen using a functionality "if" to manage what kind of data will be storaged.
-In addition, it is notable a suffle of the elements required to be sort out and inputed to a new element.
+The screenshot below shows how the HTML code has been summarized by 'id' to be called by ElementId.
 
-<img src="./Assets/images/comparison-if.png" alt="part od CSS code with if's" width="50%" height="50%" />
+<img src="./Assets/images/html-code.png" alt="entire body of HTML code" width="50%" height="50%" />
 
-In the end the of the functions is created a repetition scheme as a looping (while) that will be displayed and ensure that the number of elements of the password lenght will attend the requirements of the end-user, then a value will be set to the passsword that will use the value when display the main function "writePassword()".
+The next illustration shows part of the JavaScript code and some examples of how the elements are called by ID.
 
-<img src="./Assets/images/while-repetition.png" alt="looping using while" width="70%" height="70%" />
+<img src="./Assets/images/javascript-code.png" alt="calling elements by ID" width="40%" height="40%" />
 
-On the top of the code we have the main function of the code that will receive all the values processed as shown above and then display the final result to the end-user.
+To access the quiz, use the link below.
 
-<img src="./Assets/images/writepassword-function.png" alt="main function of the code" width="70%" height="70%" />
-
-### Deployed Website
-
-To have a better understanding of what was happening behind the scenes to create the final result, I have inserted some codes on Console log to follow how it was working.
-
-<img src="./Assets/images/console-log.png" alt="main function of the code" width="45%" height="45%" />
-
-https://robinsonfdossantos.github.io/Generate-Password/
+https://robinsonfdossantos.github.io/JavaScript_Quiz/
 
 For more information, use the browser's DevTools by typing Ctrl + Shift + I.
 
@@ -81,93 +64,3 @@ Members of the Bootcamp team, and in special to Meeks Gombe, Dominique who helpe
 ## License
 
 Licensed under the MIT license.
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
