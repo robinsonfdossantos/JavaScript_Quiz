@@ -1,12 +1,86 @@
-# 04 Web APIs: Code Quiz
+# JavaScript / Web APIs: JavaScript Quiz
 
-## Your Task
+## Description
+This webpage has been developed from scratch as a homework challenge, which aims to create a quiz about JavaScript subjects to test users' knowledge and compare their scores.
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+The development of this webiste required a lot of research from me to suit the requirements and ensure that the data will be saved properly.
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+Using the DOM method and creating just a small HTML document and working by calling the elements by 'id' was the most interesting lesson learned while developing this code.
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+Therefore, each new element learnt throughout each new assessment has been a great opportunity to understand and develop my Web Development skills.
+
+## Usage
+The webpage has been developed using VS Code, where the structure was created in HTML, CSS and the interaction with the end-user was developed using Javascript. 
+
+The website is a quiz to challenge users interested in test their knowledge about JavaScript and compare their scores with their peers.
+
+It consists in 7 questions that have to be answer by multiple choices, where each right answer scores 10 points and each wrong answer penalizes by 5 seconds the user on clock.
+
+The image below shows the first interaction with the website, where the user is presented to the instructions and to a button to start the quiz. Also, a timer is displayed that will start a countdown as soon the button is clicked.
+
+<img src="./Assets/images/start-quiz.png" alt="starting page and instructions" width="60%" height="60%" />
+
+By clicking on the button 'Start Quiz' an event "click" will be activate, then section of question will be displayed and the user has to run against the time to try to finish answering all the questions before the time finishes and pay a lot of attention because each wrong answer will take 5 seconds from the time remaining.
+
+Below is an illustration about how the question will be displayed.
+
+<img src="./Assets/images/question.png" alt="example of the questions in the quiz" width="60%" height="60%" />
+
+As soon as the user finishes answering all the questions or the clock reaches the end, a screen with their scores is presented with a textbox and a button to save their scores to compare to their peers later in the localSorage.
+
+<img src="./Assets/images/end-save.png" alt="scores and saving page" width="40%" height="40%" />
+<img src="./Assets/images/scores.png" alt="score in localStorage" width="40%" height="40%" />
+
+To access the scores, open the DevTools on your browser and navigate to the tab 'Application', then look for 'Storage', followed by 'LocalStorage' and click on the file in there.
+
+When the button 'Save' is actioned a confirm box is displayed to ensure the data was storaged and asking if you want to play again.
+
+If you choose to play again the page will reloaded and a new quiz starts, otherwise, a new message will be displayed asking if you really want to leave the quiz. If you confirm that you do not want to play anymore, the page will be closed.
+<img src="./Assets/images/play-again.png" alt="confirm saving and play again" width="40%" height="40%" />
+<img src="./Assets/images/quit.png" alt="quit the game or play again" width="40%" height="40%" />
+
+<img src="./Assets/images/numbers-confirm.png" alt="confirm if want to have numbers" width="40%" height="40%" />
+<img src="./Assets/images/special-confirm.png" alt="confirm if want to have special characteres" width="40%" height="40%" />
+
+As soon as the end-user finishes confirming what he wants or not in his password, the function will be displayed to the screen with a random password that contains everything as required.
+
+<img src="./Assets/images/password-displayed.png" alt="example of a password with 8 characteres" width="60%" height="60%" />
+
+
+## Development & Deployment
+
+The code to create the website was developed using Javascript, where it was possible create interaction by using events as "click" on the buttom and a group of comparisons of the data inserted to attend the acceptance criteria. 
+
+The screenshot below shows part of the code where a function is created and a group comparisons happen using a functionality "if" to manage what kind of data will be storaged.
+In addition, it is notable a suffle of the elements required to be sort out and inputed to a new element.
+
+<img src="./Assets/images/comparison-if.png" alt="part od CSS code with if's" width="50%" height="50%" />
+
+In the end the of the functions is created a repetition scheme as a looping (while) that will be displayed and ensure that the number of elements of the password lenght will attend the requirements of the end-user, then a value will be set to the passsword that will use the value when display the main function "writePassword()".
+
+<img src="./Assets/images/while-repetition.png" alt="looping using while" width="70%" height="70%" />
+
+On the top of the code we have the main function of the code that will receive all the values processed as shown above and then display the final result to the end-user.
+
+<img src="./Assets/images/writepassword-function.png" alt="main function of the code" width="70%" height="70%" />
+
+### Deployed Website
+
+To have a better understanding of what was happening behind the scenes to create the final result, I have inserted some codes on Console log to follow how it was working.
+
+<img src="./Assets/images/console-log.png" alt="main function of the code" width="45%" height="45%" />
+
+https://robinsonfdossantos.github.io/Generate-Password/
+
+For more information, use the browser's DevTools by typing Ctrl + Shift + I.
+
+## Credits
+
+Members of the Bootcamp team, and in special to Meeks Gombe, Dominique who helped me to understand and overcome all my doubts through a 1:1 tutor session.
+
+## License
+
+Licensed under the MIT license.
 
 ## User Story
 

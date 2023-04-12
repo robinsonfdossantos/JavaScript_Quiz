@@ -55,6 +55,7 @@ function startQuiz() {
         currentQuestion = 0;
         score = 0;
         document.querySelector("button").style.display = "none";
+        document.getElementById("explain").style.display = "none";
         displayQuestion();
         hideScore();
         Timer();
