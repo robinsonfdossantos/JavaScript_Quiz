@@ -43,26 +43,29 @@ const quizJavaScript = [
     },
 ];
 
-
 let currentQuestion = 0;
+
+startQuiz()
 
 // Button starts and disappear
 function startQuiz() {
-    timeLeft = 30;
-    questionsAnswered = 0;
-    currentQuestion = 0;
-    score = 0;
-    document.querySelector("button").style.display = "none";
-    displayQuestion();
-    hideScore();
-    Timer();
+    startButton.addEventListener('click', function () {
+        timeLeft = 30;
+        questionsAnswered = 0;
+        currentQuestion = 0;
+        score = 0;
+        document.querySelector("button").style.display = "none";
+        displayQuestion();
+        hideScore();
+        Timer();
+    });
 }
 
 function hideScore() {
     document.getElementById("score-section").style.display = "none";
 }
 
-function showScore(){
+function showScore() {
     document.getElementById("score-section").style.display = "block";
 }
 
@@ -88,7 +91,6 @@ function displayQuestion() {
     }
 }
 
-
 // *** TIMER ***
 var score = 0;
 var timeLeft = 30;
@@ -99,15 +101,14 @@ var timer;
 function Timer() {
     timer = setInterval(function () {
         timeLeft--;
-        
 
         if (timeLeft <= 0 || questionsAnswered === numQuestions) {
             endQuiz();
             timeLeft = 0
-        }else{
-             document.getElementById("time").textContent = timeLeft;
+        } else {
+            document.getElementById("time").textContent = timeLeft;
         }
-       
+
     }, 1000); // Update every second (1000ms)
 }
 
@@ -118,7 +119,7 @@ function checkAnswer(event) {
     if (selectedAnswer === correctAnswer) {
         score++;
         questionsAnswered++;
-    }else{
+    } else {
         questionsAnswered++;
         timeLeft -= 5;
     }
@@ -131,16 +132,14 @@ function checkAnswer(event) {
     }
 }
 
-
 // Display the results
 function endQuiz() {
     clearInterval(timer);
     showScore();
     document.getElementById("quiz").style.display = "none";
     document.getElementById("result").textContent = `Quiz Over! You scored ${score * 10}  points`;
-    document.getElementById("score").textContent = `Your score is ${score} out of ${quizJavaScript.length}`; 
+    document.getElementById("score").textContent = `Your score is ${score} out of ${quizJavaScript.length}`;
 }
-
 
 // **** Save Score ****
 saveButton.addEventListener('click', function () {
@@ -151,12 +150,19 @@ saveButton.addEventListener('click', function () {
 
     users.push(data);
     localStorage.setItem('users', JSON.stringify(users));
-    confirm ("Your score has been saved");
-    document.getElementById("confirmButton").addEventListener("click", function() {
-        document.getElementById("user").value = "";
-      });
+    if (confirm("Your score has been saved. Play again?")) {
+        location.reload();
+    } else {
+        quitGame();
+    }
+})
 
-});
-
-//window.location = 'C:/Users/robin/bootcamp/JavaScript_Quiz/index.html';
+function quitGame() {
+    const confirmQuit = confirm('Are you sure you want to quit the game?');
+    if (confirmQuit) {
+        window.close();
+    } else {
+        location.reload();
+    }
+}
 
