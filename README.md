@@ -36,6 +36,7 @@ To access the scores, open the DevTools on your browser and navigate to the tab 
 When the button 'Save' is actioned a confirm box is displayed to ensure the data was storaged and asking if you want to play again.
 
 If you choose to play again the page will reloaded and a new quiz starts, otherwise, a new message will be displayed asking if you really want to leave the quiz. If you confirm that you do not want to play anymore, the page will be closed.
+
 <img src="./Assets/images/play-again.png" alt="confirm saving and play again" width="30%" height="30%" />
 <img src="./Assets/images/quit.png" alt="quit the game or play again" width="30%" height="30%" />
 
@@ -63,4 +64,4 @@ Members of the Bootcamp team, and in special to Meeks Gombe, Dominique who helpe
 
 ## License
 
-Licensed under the MIT license.
+Licensed under the MIT License.
